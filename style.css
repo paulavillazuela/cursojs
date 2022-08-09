@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+h1 , h2{
+display: flex;
+justify-content: center;
+margin: 20px;
+}
+
+h3{
+    font-style: oblique;
+    padding: 15px;
+}
+form{
+    background-color: rgb(233, 233, 233);
+    padding: 15px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+label{
+    font-style: oblique;
+    color: black;
+    font-size: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+input{
+    border-radius: 10px;
+}
+
+button{
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    padding: 5px;
+    margin-left: 10px;
+}
+
+.contenedor{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.card{
+   border-radius: 10px;
+   background-color: black;
+   color: white;
+   margin: 20px;
+   padding: 20px;
+   width: 300px;
+   display: inline-block;
+   
+}
+
+.btn{
+    background-color: white;
+    padding: 10px;
+    border-radius: 15px;
+    color: red;
+    display: flex;
+    justify-content: center;
+}
+
+.card-img{
+    width: 100%;
+}
+
+.card-text{
+   text-align: center;
+   padding: 5px;
+}
+
+.card-title {
+    text-align: center;
+    font-style: oblique;
+    font-size: 20px;
+
+}
+
+#pagarSuelta, #pagarCuatro, #pagarOcho, #pagarDoce{
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+#opciones{
+    width: 150px;
+    height: 40px;
+    padding: 5px;
+    margin-left: 15px;
+}
+
+.cardClases{
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    margin: 20px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+}
