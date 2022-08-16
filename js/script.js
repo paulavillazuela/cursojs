@@ -1,23 +1,3 @@
-// Datos a usar
-function Clase(estilo,profesor,nivel){
-        this.estilo = estilo;
-        this.profesor = profesor;
-        this.nivel = nivel;
-}
-
-const clases = [
-    {estilo:"Heels", profesor: "Melany Diaz", nivel:"Intermedio"},
-    {estilo:"Reggaeton", profesor:"Florencia Martinez", nivel:"Principiante"},
-    {estilo:"Hip Hop", profesor:"Paula Villazula", nivel:"Principiante"},
-    {estilo:"Reggaeton", profesor:"Florencia Stranges", nivel:"Intermedio"},
-    {estilo:"Contemporáneo", profesor:"Barbara Huesca", nivel:"Avanzado"},
-    {estilo:"Street", profesor:"Ornella Luna", nivel:"Intermedio"},
-    {estilo:"Salsa fusion", profesor:"Florencia Radvanski", nivel:"Principiante"},
-    {estilo:"Hip Hop", profesor: "Agustina Caumont", nivel:"Avanzado"},
-    {estilo:"Dancehall", profesor:"Lourdes Moreno", nivel:"Intermedio"}
-]
-
-
 // Saludar a quien ingreso sus datos en el form y guardar datos en localStorage
 
 function saludar() {
@@ -56,15 +36,16 @@ function guardarDatos(storage){
 
 const btningreso = document.getElementById("ingreso");
 
-btningreso.addEventListener("click", ()=>{
-
+btningreso.addEventListener("click", (e)=>{
+    
+    e.preventDefault()
     saludar();
    (document.getElementById("checkbox").checked) ? guardarDatos("localStorage") : guardarDatos("sessionStorage");
 
 })
 
 
-//Ejecutar la compra con un alert, agregar precio y (falta mostrar carrito)
+//Ejecutar la compra con un alert, agregar precio y (falta generar carrito)
 
 const suelta = document.getElementById("suelta");
 const packCuatro = document.getElementById("cuatro");
@@ -74,34 +55,54 @@ const packDoce = document.getElementById("doce");
 
 suelta.addEventListener("click", () => {
     const pago = document.getElementById("pagarSuelta");
-    pago.innerHTML = "Para finalizar: abonar $800";
+    pago.innerHTML = `Para finalizar: abonar $800 <img src="./assets/carrito.png">`;
+    pago.addEventListener("click",()=>{
+        
+    })
 });
+
 packCuatro.addEventListener("click", () => {
     const pago = document.getElementById("pagarCuatro");
-    pago.innerHTML = "Para finalizar: abonar $2700";
+    pago.innerHTML = `Para finalizar: abonar $2700 <img src="./assets/carrito.png">`;
 });
 packOcho.addEventListener("click", () => {
     const pago = document.getElementById("pagarOcho");
-    pago.innerHTML = "Para finalizar: abonar $5900";
+    pago.innerHTML = `Para finalizar: abonar $5900 <img src="./assets/carrito.png">`;
 });
 packDoce.addEventListener("click", () => {
     const pago = document.getElementById("pagarDoce");
-    pago.innerHTML = "Para finalizar: abonar $9100";
+    pago.innerHTML = `Para finalizar: abonar $9100 <img src="./assets/carrito.png">`;
 });
 
 //El usuario elige que nivel desea y se le muestran las opciones
 
-let opcionesClases = document.getElementById("opciones");
+const opcionesClases = document.getElementById("opciones");
+const seleccion = document.getElementById("seleccion");
+const textoSeleccion = document.getElementById("texto-seleccion")
 
-
-opcionesClases.onchange = ()=>{
-    const seleccion = document.getElementById("seleccion");
-    const filtrado = clases.filter ((clase)=> clase.nivel == opcionesClases.value);
-    seleccion.innerHTML = `Clases de nivel ${opcionesClases.value}: <br><br> ${JSON.stringify(filtrado)}`;
-    seleccion.className = "cardClases"; 
+function filtrar(array){
+    return array.filter ((clase)=> clase.nivel == opcionesClases.value);
 }
 
+function crearTarjetas(array){
+    seleccion.innerHTML = "";
+    textoSeleccion.innerHTML = `Tus opciones de nivel ${opcionesClases.value}:`
+    array.forEach((clase)=>{
+        const tarjeta = `<div class="card">
+                            <img src="${clase.imagen}" class="card-img" alt="">
+                            <div class="card-body">
+                            <h4 class="card-title">Estilo: ${clase.estilo}</h4>
+                            <h4 class="card-title">Profe: ${clase.profesor}</h4>
+                        </div>`;
+                        seleccion.innerHTML += tarjeta;
+    })
+}
 
-
-
-
+opcionesClases.onchange = ()=>{
+    
+    fetch ("./js/data.json")
+    .then((rta)=>rta.json())
+    .then ((data)=>{
+        crearTarjetas(filtrar(data));
+    })
+}

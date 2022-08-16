@@ -106,3 +106,25 @@ button{
     width: 300px;
     text-align: center;
 }
+
+.pagos{
+    background-color: #0000008c;
+}
+
+.compra{
+    background-color: black;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 30px;
+    height: 300px;
+}
+
+#carrito{
+    margin: 30px;
+    color: white;
+}
+
+#compra{
+    color: white;
+}

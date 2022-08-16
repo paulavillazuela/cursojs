@@ -1,0 +1,71 @@
+[
+{
+    "estilo":"Heels", 
+    "profesor": "Melany Diaz", 
+    "nivel":"Intermedio",
+    "imagen": "./assets/Mel Diaz.jpg"
+},
+
+{
+    "estilo":"Reggaeton",
+    "profesor":"Florencia Martinez",
+    "nivel":"Principiante",
+    "imagen": "./assets/Flor Martinez.jpg"
+},
+
+{
+    "estilo":"Hip Hop",
+    "profesor":"Paula Villazula",
+    "nivel":"Principiante",
+    "imagen": "./assets/Pau Villazuela.jpg"
+},
+
+{
+    "estilo":"Reggaeton",
+    "profesor":"Florencia Stranges", 
+    "nivel":"Intermedio",
+    "imagen": "./assets/Flor Stranges.jpg"
+},
+
+{
+    "estilo":"Street",
+    "profesor":"Barbara Huesca",
+    "nivel":"Avanzado",
+    "imagen": "./assets/Bar Huesca.jpg"
+},
+
+{
+    "estilo":"Hip Hop",
+    "profesor":"Ornella Luna",
+    "nivel":"Intermedio",
+    "imagen": "./assets/Orne Luna.jpg"
+},
+
+{
+    "estilo":"Salsa fusion",
+    "profesor":"Florencia Radvanski",
+    "nivel":"Principiante",
+    "imagen": "./assets/Flor Rad.jpg"
+},
+
+{
+    "estilo":"Hip Hop",
+    "profesor": "Agustina Caumont",
+    "nivel":"Avanzado",
+    "imagen": "./assets/Agus Caumont.jpg"
+},
+
+{
+    "estilo":"Dancehall",
+    "profesor":"Lourdes Moreno",
+    "nivel":"Intermedio",
+    "imagen": "./assets/Lour Moreno.jpg"
+},
+
+{
+    "estilo":"Urbano",
+    "profesor":"Emiliano Pilatti",
+    "nivel":"Intermedio",
+    "imagen": "./assets/Emi Pilatti.jpg"
+}
+]
