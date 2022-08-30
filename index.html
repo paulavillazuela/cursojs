@@ -31,8 +31,8 @@
         <div class="card-body">
             <h4 class="card-title">Clase suelta</h4>
             <p class="card-text">Podrás abonar la clase suelta y utilizarla cuando desees, dentro de los 30 dias a partir del pago</p>
-            <a href="#" class="btn btn-primary" id="suelta" >Comprar</a>
-            <a href="#" id="pagarSuelta"></a>
+            <a href="#" class="btn btn-primary" id="suelta">Comprar</a>
+            <span id="precio">$800</span>
         </div>
     </div>
     <div class="card">
@@ -41,7 +41,7 @@
             <h4 class="card-title">Pack x 4 clases</h4>
             <p class="card-text">Podrás abonar el pack de 4 clases y utilizarlas cuando desees, dentro de los 30 dias a partir del pago</p>
             <a href="#" class="btn btn-primary" id="cuatro">Comprar</a>
-            <a href="#" id="pagarCuatro"></a>
+            <span id="precio">$2700</span>
         </div>
     </div>
     <div class="card">
@@ -50,7 +50,7 @@
             <h4 class="card-title">Pack x 8 clases</h4>
             <p class="card-text">Podrás abonar el pack de 8 clases y utilizarlas cuando desees, dentro de los 30 dias a partir del pago</p>
             <a href="#" class="btn btn-primary" id="ocho">Comprar</a>
-            <a href="#" id="pagarOcho"></a>
+            <span id="precio">$5900</span>
         </div>
     </div>
     <div class="card">
@@ -59,9 +59,18 @@
             <h4 class="card-title">Pack x 12 clases</h4>
             <p class="card-text">Podrás abonar el pack de 12 clases y utilizarlas cuando desees, dentro de los 30 dias a partir del pago</p>
             <a href="#" class="btn btn-primary" id="doce">Comprar</a>
-            <a href="#" id="pagarDoce"></a>
+            <span id="precio">$9100</span>
         </div>
     </div>
+</div>
+
+<div class="col-sm-4" id="resumen-carrito">
+    <img src="./assets/carrito.png">
+    <div id="resumen"></div>
+    <span id="total">Total:</span>
+    <button id="boton-comprar">Comprar</button>
+    
+    
 </div>
 
 <h3 id="titulo2">Conoce las mejores clases para vos!</h3>
@@ -78,7 +87,6 @@
 
     <h3 id="texto-seleccion"></h3>
    <div id="seleccion"></div>
-
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./js/script.js"></script>

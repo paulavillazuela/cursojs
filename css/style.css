@@ -128,3 +128,51 @@ button{
 #compra{
     color: white;
 }
+
+#resumen-carrito{
+    display: flex;
+    margin: 20px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#precio{
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+}
+
+#resumen{
+    display: flex;
+    flex-direction: column;
+}
+
+.resumen-items{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+}
+
+.boton-eliminar{
+    background-color: rgb(255, 0, 0);
+    color: white;
+    width: 70px;
+    height: 30px;
+    margin-top: 10px;
+}
+
+#boton-comprar{
+    background-color: rgb(133, 233, 133);
+    color: black;
+    width: 70px;
+    height: 30px;
+    margin-top: 10px;
+}
+
+span{
+    font-style: oblique;
+    font-weight: bold;
+    padding: 15px;
+    font-size: 18px;
+}
