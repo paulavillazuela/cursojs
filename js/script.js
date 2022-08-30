@@ -86,8 +86,10 @@ function mostrarCarrito(){
     for (const btn of btnEliminar) {
         btn.addEventListener("click", (e)=>{
             deleteCarrito(e.target.parentNode.id);
-            mostrarCarrito();  
+            mostrarCarrito();
+            total.innerText = "Total:";
         })
+        
     }
 
     const btnComprar = document.getElementById("boton-comprar");
@@ -95,7 +97,7 @@ function mostrarCarrito(){
         Swal.fire({
             title: "Gracias por su compra",
             icon: "success",
-            iconColor: "#0000ff",
+            iconColor: "#00ff00",
             position: "top-center",
         })
     })  
@@ -106,6 +108,7 @@ function calcularTotal(){         //--------------------------PROBLEMA----------
     total.innerText = "Total:";
     carrito.forEach((item) => {
         total.innerText += item.valor;
+
     })
     
 }
