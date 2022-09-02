@@ -52,26 +52,27 @@ const ocho = document.getElementById("ocho");
 const doce = document.getElementById("doce");
 
 class itemsCarrito {
-    constructor (id,detalle, valor){
+    constructor(id, detalle, valor, cantidad) {
         this.id = id;
         this.detalle = detalle;
         this.valor = valor;
+        this.cantidad = cantidad;
     }
 }
-    
+
 const carrito = []
 
-function addCarrito(id, detalle, valor){
-   const newItem = new itemsCarrito (id, detalle, valor);
-   carrito.push(newItem);
+function addCarrito(id, detalle, valor, cantidad) {
+    const newItem = new itemsCarrito(id, detalle, valor, cantidad);
+    carrito.push(newItem);
 }
 
-function deleteCarrito (id){
-    const itemId = carrito.findIndex((item)=>item.id === id);
-    carrito.splice(itemId,1);
+function deleteCarrito(id) {
+    const itemId = carrito.findIndex((item) => item.id === id);
+    carrito.splice(itemId, 1);
 }
 
-function mostrarCarrito(){
+function mostrarCarrito() {
     const resumen = document.getElementById("resumen");
     resumen.innerHTML = "";
     carrito.forEach((item) => {
@@ -84,56 +85,56 @@ function mostrarCarrito(){
 
     const btnEliminar = document.getElementsByClassName("boton-eliminar");
     for (const btn of btnEliminar) {
-        btn.addEventListener("click", (e)=>{
+        btn.addEventListener("click", (e) => {
             deleteCarrito(e.target.parentNode.id);
             mostrarCarrito();
-            total.innerText = "Total:";
+            calcularTotal();
         })
-        
+
     }
 
     const btnComprar = document.getElementById("boton-comprar");
-    btnComprar.addEventListener("click", ()=>{
+    btnComprar.addEventListener("click", () => {
         Swal.fire({
             title: "Gracias por su compra",
             icon: "success",
             iconColor: "#00ff00",
             position: "top-center",
         })
-    })  
-}
-
-function calcularTotal(){         //--------------------------PROBLEMA---------------------/
-    const total = document.getElementById("total");
-    total.innerText = "Total:";
-    carrito.forEach((item) => {
-        total.innerText += item.valor;
-
     })
-    
 }
 
-suelta.addEventListener("click", (e)=>{
+function calcularTotal() {
+    const total = document.getElementById("total");
+    total.innerText = "";
+    carrito.forEach((item, cantidad) => {
+        suma = item.valor * cantidad + item.valor;
+        return suma;
+    })
+    total.innerText += "Total: " + suma;
+}
+
+suelta.addEventListener("click", (e) => {
     e.preventDefault();
-    addCarrito(1, "Clase suelta", 800);
+    addCarrito(1, "Clase suelta", 800, 1);
     mostrarCarrito();
     calcularTotal();
 })
-cuatro.addEventListener("click", (e)=>{
+cuatro.addEventListener("click", (e) => {
     e.preventDefault();
-    addCarrito(2, "Pack 4 clases", 2700);
+    addCarrito(2, "Pack 4 clases", 2700, 1);
     mostrarCarrito();
     calcularTotal();
 })
-ocho.addEventListener("click", (e)=>{
+ocho.addEventListener("click", (e) => {
     e.preventDefault();
-    addCarrito(3, "Pack 8 clases", 5900);
+    addCarrito(3, "Pack 8 clases", 5900, 1);
     mostrarCarrito();
     calcularTotal();
 })
-doce.addEventListener("click", (e)=>{
+doce.addEventListener("click", (e) => {
     e.preventDefault();
-    addCarrito(4, "Pack 12 clases", 9100);
+    addCarrito(4, "Pack 12 clases", 9100, 1);
     mostrarCarrito();
     calcularTotal();
 })

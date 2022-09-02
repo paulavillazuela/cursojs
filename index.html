@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,89 +9,94 @@
     <script src="sweetalert2.all.min.js"></script>
     <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
-   <h1>EN MOVIMIENTO</h1>
-   <h2>Estudio de danza</h2>
+    <h1>EN MOVIMIENTO</h1>
+    <h2>Estudio de danza</h2>
 
-   <form >
-    <label for="name">Nombre</label>
-        <input type="text" name="name"  id="nombre">
-    <label for="email">Email</label>
+    <form>
+        <label for="name">Nombre</label>
+        <input type="text" name="name" id="nombre">
+        <label for="email">Email</label>
         <input type="email" name="email" id="email">
-    <label for="checkbox" id="checkbox">Recordar datos</label>
+        <label for="checkbox" id="checkbox">Recordar datos</label>
         <input type="checkbox" name="checkbox" id="checkbox">
-    <button type="submit" id="ingreso">Ingresar</button>
-   </form>
+        <button type="submit" id="ingreso">Ingresar</button>
+    </form>
 
 
-   <h3 id="titulo1">Pack de clases</h3>
+    <h3 id="titulo1">Pack de clases</h3>
 
-<div class="contenedor" id="tarjetas">
-    <div class="card">
-        <img src="./assets/hh.jpg" class="card-img">
-        <div class="card-body">
-            <h4 class="card-title">Clase suelta</h4>
-            <p class="card-text">Podrás abonar la clase suelta y utilizarla cuando desees, dentro de los 30 dias a partir del pago</p>
-            <a href="#" class="btn btn-primary" id="suelta">Comprar</a>
-            <span id="precio">$800</span>
+    <div class="contenedor" id="tarjetas">
+        <div class="card">
+            <img src="./assets/hh.jpg" class="card-img">
+            <div class="card-body">
+                <h4 class="card-title">Clase suelta</h4>
+                <p class="card-text">Podrás abonar la clase suelta y utilizarla cuando desees, dentro de los 30 dias a
+                    partir del pago</p>
+                <a href="#" class="btn btn-primary" id="suelta">Comprar</a>
+                <span id="precio">$800</span>
+            </div>
+        </div>
+        <div class="card">
+            <img src="./assets/hh.jpg" class="card-img" alt="">
+            <div class="card-body">
+                <h4 class="card-title">Pack x 4 clases</h4>
+                <p class="card-text">Podrás abonar el pack de 4 clases y utilizarlas cuando desees, dentro de los 30
+                    dias a partir del pago</p>
+                <a href="#" class="btn btn-primary" id="cuatro">Comprar</a>
+                <span id="precio">$2700</span>
+            </div>
+        </div>
+        <div class="card">
+            <img src="./assets/hh.jpg" class="card-img">
+            <div class="card-body">
+                <h4 class="card-title">Pack x 8 clases</h4>
+                <p class="card-text">Podrás abonar el pack de 8 clases y utilizarlas cuando desees, dentro de los 30
+                    dias a partir del pago</p>
+                <a href="#" class="btn btn-primary" id="ocho">Comprar</a>
+                <span id="precio">$5900</span>
+            </div>
+        </div>
+        <div class="card">
+            <img src="./assets/hh.jpg" class="card-img">
+            <div class="card-body">
+                <h4 class="card-title">Pack x 12 clases</h4>
+                <p class="card-text">Podrás abonar el pack de 12 clases y utilizarlas cuando desees, dentro de los 30
+                    dias a partir del pago</p>
+                <a href="#" class="btn btn-primary" id="doce">Comprar</a>
+                <span id="precio">$9100</span>
+            </div>
         </div>
     </div>
-    <div class="card">
-        <img src="./assets/hh.jpg" class="card-img" alt="">
-        <div class="card-body">
-            <h4 class="card-title">Pack x 4 clases</h4>
-            <p class="card-text">Podrás abonar el pack de 4 clases y utilizarlas cuando desees, dentro de los 30 dias a partir del pago</p>
-            <a href="#" class="btn btn-primary" id="cuatro">Comprar</a>
-            <span id="precio">$2700</span>
-        </div>
+
+    <div class="col-sm-4" id="resumen-carrito">
+        <img src="./assets/carrito.png">
+        <div id="resumen"></div>
+        <span id="total">Total:</span>
+        <button id="boton-comprar">Comprar</button>
+
+
     </div>
-    <div class="card">
-        <img src="./assets/hh.jpg" class="card-img">
-        <div class="card-body">
-            <h4 class="card-title">Pack x 8 clases</h4>
-            <p class="card-text">Podrás abonar el pack de 8 clases y utilizarlas cuando desees, dentro de los 30 dias a partir del pago</p>
-            <a href="#" class="btn btn-primary" id="ocho">Comprar</a>
-            <span id="precio">$5900</span>
-        </div>
-    </div>
-    <div class="card">
-        <img src="./assets/hh.jpg" class="card-img">
-        <div class="card-body">
-            <h4 class="card-title">Pack x 12 clases</h4>
-            <p class="card-text">Podrás abonar el pack de 12 clases y utilizarlas cuando desees, dentro de los 30 dias a partir del pago</p>
-            <a href="#" class="btn btn-primary" id="doce">Comprar</a>
-            <span id="precio">$9100</span>
-        </div>
-    </div>
-</div>
 
-<div class="col-sm-4" id="resumen-carrito">
-    <img src="./assets/carrito.png">
-    <div id="resumen"></div>
-    <span id="total">Total:</span>
-    <button id="boton-comprar">Comprar</button>
-    
-    
-</div>
+    <h3 id="titulo2">Conoce las mejores clases para vos!</h3>
 
-<h3 id="titulo2">Conoce las mejores clases para vos!</h3>
+    <select id="opciones">
+        <option selected disabled>--Elegir Nivel--</option>
+        <option id="principiante">Principiante</option>
+        <option id="intermedio">Intermedio</option>
+        <option id="avanzado">Avanzado</option>
+    </select>
 
-<select id="opciones" >
-    <option selected disabled>--Elegir Nivel--</option>
-    <option id="principiante">Principiante</option>
-    <option id="intermedio">Intermedio</option>
-    <option id="avanzado">Avanzado</option>
-</select>
-
-<br>
-<br>
+    <br>
+    <br>
 
     <h3 id="texto-seleccion"></h3>
-   <div id="seleccion"></div>
+    <div id="seleccion"></div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./js/script.js"></script>
 </body>
+
 </html>
-
-
